@@ -11,7 +11,7 @@ Serving a trained lightGBM classifier as a webservice on AWS [flask](http://flas
     * To test the app, run the curl_periodic.sh, curl_stochastic.sh, and curl_transient.sh in terminal to query the flask server. Make sure to change the url to `0.0.0.0:80` in the scripts. It should give results of 'RRL', 'YSO', and 'CV/Nova' respectively.
 4. Run ```docker build -t app-lcclassifier .``` to  build the docker image using ```Dockerfile```.
 5. Run ```docker run -p 80:80 app-lcclassifier``` to run the docker container that got generated using the `app-lcclassifier` docker image.
-6. Select a cloud service provider (in this project we use AWS ec2) to run API on the cloud. Follow the steps of [blog](https://medium.com/@tanuj.jain.10/simple-way-to-deploy-machine-learning-models-to-cloud-fd58b771fdcf) to set up the cloud machine, especially:
+6. Select a cloud service provider (in this project we use AWS ec2) to run API on the cloud. Follow the steps of this [blog](https://medium.com/@tanuj.jain.10/simple-way-to-deploy-machine-learning-models-to-cloud-fd58b771fdcf) to set up the cloud machine, especially:
     * Generate SSH key pairs and store the permission key locally.
     * log in to the remote machine and install docker with `sudo yum install docker`, `sudo service docker start`, `sudo usermod -a -G docker ec2-user`
     * scp app.py, pickle files, Dockerfile, requirements.txt to the remote machine.
