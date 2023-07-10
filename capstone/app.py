@@ -15,25 +15,25 @@ def load_model():
     global model_hier
     # model variable refers to the global variable
     #with open('iris_trained_model.pkl', 'rb') as f:
-    with open('./hierarchical_level_lgbm_model.pkl', 'rb') as f:
+    with open('./model/hierarchical_level_lgbm_model.pkl', 'rb') as f:
         model_hier = pickle.load(f)
 
     global model_periodic
     # model variable refers to the global variable                                                                                                                               
     #with open('iris_trained_model.pkl', 'rb') as f:                                                                                                                             
-    with open('./periodic_level_lgbm_model.pkl', 'rb') as f:
+    with open('./model/periodic_level_lgbm_model.pkl', 'rb') as f:
         model_periodic = pickle.load(f)
 
     global model_stochastic
     # model variable refers to the global variable                                                                                                                               
     #with open('iris_trained_model.pkl', 'rb') as f:                                                                                                                             
-    with open('./stochastic_level_lgbm_model.pkl', 'rb') as f:
+    with open('./model/stochastic_level_lgbm_model.pkl', 'rb') as f:
         model_stochastic = pickle.load(f)
 
     global model_transient
     # model variable refers to the global variable                                                                                                                               
     #with open('iris_trained_model.pkl', 'rb') as f:                                                                                                                             
-    with open('./transient_level_lgbm_model.pkl', 'rb') as f:
+    with open('./model/transient_level_lgbm_model.pkl', 'rb') as f:
         model_transient = pickle.load(f)
 
         
