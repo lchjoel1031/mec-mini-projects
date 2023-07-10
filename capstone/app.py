@@ -4,7 +4,9 @@ import pickle
 import numpy as np
 import pandas as pd
 from flask import Flask, request
+import logging
 
+logging.basicConfig(filename='logs/record.log', level=logging.INFO)
 model = None
 app = Flask(__name__)
 
